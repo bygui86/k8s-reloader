@@ -1,0 +1,16 @@
+namespace: reloader
+
+resources:
+  - namespace.yaml
+  - rbac.yaml
+  # - psp.yaml
+  - deployment.yaml
+  - service.yaml
+
+commonLabels:
+  app: reloader
+  domain: support
+  group: reloader
+
+commonAnnotations:
+  version: v0.0.74
