@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pause
+  name: busybox
   annotations:
     # ALL ConfigMaps and Secrets used in this deployment
     reloader.stakater.com/auto: "true"
@@ -11,23 +11,26 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pause
+      app: busybox
   template:
     metadata:
       labels:
-        app: pause
+        app: busybox
     spec:
       securityContext:
         runAsNonRoot: true
         runAsUser: 1001
         fsGroup: 1001
       containers:
-        - name: pause
-          image: k8s.gcr.io/pause
+        - name: busybox
+          image: busybox
+          args:
+            - sleep
+            - "3600"
           imagePullPolicy: IfNotPresent
           envFrom:
             - secretRef:
-                name: kubectl
+                name: busybox
           resources:
             requests:
               cpu: 250m
@@ -45,4 +48,4 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: kubectl
+            name: busybox

@@ -72,7 +72,7 @@ Example of how to use [stakater/Reloader](https://github.com/stakater/Reloader) 
 	
 	```
 	time="2020-11-12T09:31:42Z" level=info msg="Changes detected in 'kubectl' of type 'CONFIGMAP' in namespace 'default'"
-	time="2020-11-12T09:31:42Z" level=info msg="Updated 'pause' of type 'Deployment' in namespace 'default'"
+	time="2020-11-12T09:31:42Z" level=info msg="Updated 'busybox' of type 'Deployment' in namespace 'default'"
 	```
 
 ### 3 - Update Secret test
@@ -91,5 +91,5 @@ Example of how to use [stakater/Reloader](https://github.com/stakater/Reloader) 
 	
 	```
 	time="2020-11-12T09:28:38Z" level=info msg="Changes detected in 'kubectl' of type 'SECRET' in namespace 'default'"
-	time="2020-11-12T09:28:38Z" level=info msg="Updated 'pause' of type 'Deployment' in namespace 'default'"
+	time="2020-11-12T09:28:38Z" level=info msg="Updated 'busybox' of type 'Deployment' in namespace 'default'"
 	```

@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kubectl
+  name: busybox
   # annotations:
   #   # Reloading restricted by annotated deployments
   #   reloader.stakater.com/match: "true"
 data:
   test.json: |-
     {
+      "additional": "new",
       "annotations": {
         "list": [
           {
@@ -20,6 +21,5 @@ data:
             "type": "dashboard"
           }
         ]
-      },
-      "additional": "new"
+      }
     }

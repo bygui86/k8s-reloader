@@ -3,7 +3,6 @@ namespace: reloader
 resources:
   - namespace.yaml
   - rbac.yaml
-  # - psp.yaml
   - deployment.yaml
   - service.yaml
 
